@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-image: url(https://www.pixelstalk.net/wp-content/uploads/images6/Dark-Forest-Background-HD.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: fixed;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.calculator{
+    border:1px solid gray;
+    border-radius: 20px;
+    box-shadow: -8px -8px  15px rgb(83, 83, 83);
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(71, 71, 71, 0.128);
+   
+}
+input{
+    width:95%;
+    text-align: right;
+    padding: 15px;
+    font-size:25px;
+    background-color: transparent;
+    border:none;
+    box-shadow: 0px 0px 15px rgb(141, 141, 141, 0.9);
+     color:white;
+     margin-bottom: 10px;
+     font-weight: bold;
+     outline: none;
+}
+input::placeholder{
+    color:white;
+}
+button{
+    width:60px;
+    height: 60px;
+    margin:10px;
+    border:none;
+    border-radius: 50px;
+    background-color: rgba(39, 39, 39, 0.463);
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: -8px -8px 15px rgba(114, 114, 114, 0.553);
+    transition: 1s;
+}
+button:hover{
+    color:aquamarine;
+    border:2px solid yellow;
+}
+#equalbtn{
+    background-color: orange;
+}

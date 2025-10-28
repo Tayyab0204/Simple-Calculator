@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZLmb3LVEfTNiX1DrW37ZD41NmShRzLBs3jQ&s">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="display" readonly>
+        <div>
+            <button style="background-color: #DD2D00;" onclick="cleardisplay()">AC</button>
+            <button style="background-color: #A17944" onclick="deleteLast()">DEL</button>
+            <button style="background-color: #C2D4B1" onclick="showondisplay('%')">%</button>
+            <button style="background-color: #A6B992" onclick="showondisplay('/')">/</button>
+        </div>
+        <div>
+    <button onclick="showondisplay('7')">7</button>
+    <button onclick="showondisplay('8')">8</button>
+    <button onclick="showondisplay('9')">9</button>
+    <button style="background-color:cadetblue" onclick="showondisplay('*')">*</button>
+</div>
+<div>
+    <button onclick="showondisplay('4')">4</button>
+    <button onclick="showondisplay('5')">5</button>
+    <button onclick="showondisplay('6')">6</button>
+    <button style="background-color:cadetblue" onclick="showondisplay('-')">-</button>
+</div>
+<div>
+    <button onclick="showondisplay('1')">1</button>
+    <button onclick="showondisplay('2')">2</button>
+    <button onclick="showondisplay('3')">3</button>
+    <button style="background-color: cadetblue" onclick="showondisplay('+')">+</button>
+</div>
+<div>
+    <button onclick="showondisplay('0')">0</button>
+    <button onclick="showondisplay('00')">00</button>
+    <button onclick="showondisplay('.')">.</button>
+    <button id="equalbtn" onclick="calculate()">=</button>
+</div>
+    </div>
+    <script>
+        function showondisplay(value) {
+            document.getElementById("display").value += value;
+            
+        }
+
+        function cleardisplay(){
+            document.getElementById("display").value = "";
+        }
+        function calculate(){
+            try{
+                let result=eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  } catch {
+    document.getElementById('display').value = 'Error';
+  }
+
+            }
+            function deleteLast() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1); // Remove last character
+  }
+    </script>
+</body>
+</html>
